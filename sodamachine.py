@@ -14,7 +14,9 @@ if change >= 1.75:
     print("Select 5 for Dr. Pepper")
     print("\n")
     
-    #displays products available 
+
+    #displays products available using a set notation 
+
     product = {1: "Coke", 2: "Sprite", 3: "Minute Maid Lemonade", 4: "Gatorade", 5: "Dr. Pepper"}
     
     #Second input that prompts the user to select a product from the machine
@@ -29,10 +31,39 @@ if change >= 1.75:
     if change > 1.75:
            changeback = change - 1.75
            
+
+           def change_amount(x):
+                dollars = x// 1.00
+                x %= 1.00
+                
+                quarters = x // 0.25
+                x %= 0.25
+                
+                dimes = x // 0.10
+                x %= 0.10
+                
+                nickels = x // 0.05
+                x %= 0.05
+                
+                pennies = x
+                
+                return dollars, quarters, dimes, nickels, pennies
+                
+                
+           
+        
+           dollars, quarters, dimes, nickels, pennies = change_amount(changeback)
            #to output currency in the proper format, be sure to round the float
            #up to two decimal places
-           
-           print(f"You got back {round(changeback, 2)} in extra Change ")
+           print()
+           print(f"You got back {dollars} in dollars ")
+           print(f"You got back {quarters} in quarters")
+           print(f"You got back {dimes} in dimes")
+           print(f"You got back {nickels} in nickels")
+           print(f"You got back {pennies} in pennies")
+           print()
+
+          
     
     print("\nThank you, have a nice day!")
 
