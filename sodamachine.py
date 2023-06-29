@@ -14,7 +14,9 @@ if change >= 1.75:
     print("Select 5 for Dr. Pepper")
     print("\n")
     
+
     #displays products available using a set notation 
+
     product = {1: "Coke", 2: "Sprite", 3: "Minute Maid Lemonade", 4: "Gatorade", 5: "Dr. Pepper"}
     
     #Second input that prompts the user to select a product from the machine
@@ -29,6 +31,7 @@ if change >= 1.75:
     if change > 1.75:
            changeback = change - 1.75
            
+
            def change_amount(x):
                 dollars = x// 1.00
                 x %= 1.00
@@ -59,9 +62,10 @@ if change >= 1.75:
            print(f"You got back {nickels} in nickels")
            print(f"You got back {pennies} in pennies")
            print()
+
+          
     
     print("\nThank you, have a nice day!")
 
 else: 
     print("Products cost $1.75 - please add more change")
-
